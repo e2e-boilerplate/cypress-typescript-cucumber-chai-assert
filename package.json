@@ -1,19 +1,23 @@
 {
   "author": "Girma Nigusse <xgirma@gmail.com>",
   "bugs": {
-    "url": "https://github.com/e2e-boilerplate/cypress-typescript-browserify-chai-assert/issues"
+    "url": "https://github.com/e2e-boilerplate/cypress-typescript-browserify-cucumber-assert/issues"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   },
   "dependencies": {
     "@cypress/browserify-preprocessor": "2.1.4",
+    "cucumber": "6.0.5",
     "cypress": "4.3.0",
+    "cypress-cucumber-preprocessor": "2.2.0",
     "rimraf": "3.0.2",
     "ts-loader": "6.2.2",
     "tsify": "4.0.1",
     "typescript": "3.8.3"
   },
-  "description": "Cypress end-to-end test automation boilerplate. Using TypeScript, Browserify, Chai and Assert.",
+  "description": "Cypress end-to-end test automation boilerplate. Using TypeScript, Browserify, Cucumber and Assert.",
   "devDependencies": {
-    "@types/chai": "4.2.11",
     "eslint-plugin-cypress": "2.10.3",
     "husky": "4.2.3",
     "lint-staged": "10.1.1",
@@ -22,7 +26,7 @@
     "tslint-config-prettier": "1.18.0",
     "tslint-plugin-prettier": "2.3.0"
   },
-  "homepage": "https://github.com/e2e-boilerplate/cypress-typescript-browserify-chai-assert#readme",
+  "homepage": "https://github.com/e2e-boilerplate/cypress-typescript-browserify-cucumber-assert#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged --allow-empty"
@@ -32,7 +36,7 @@
     "assert",
     "boilerplate",
     "browserify",
-    "chai",
+    "cucumber",
     "cypress",
     "e2e",
     "e2e tests",
@@ -46,10 +50,10 @@
       "prettier --write"
     ]
   },
-  "name": "cypress-typescript-browserify-chai-assert",
+  "name": "cypress-typescript-browserify-cucumber-assert",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/e2e-boilerplate/cypress-typescript-browserify-chai-assert.git"
+    "url": "git+https://github.com/e2e-boilerplate/cypress-typescript-browserify-cucumber-assert.git"
   },
   "scripts": {
     "clean:screenshots": "npx cypress/screenshots/*",
@@ -57,7 +61,7 @@
     "lint": "npx tslint -c tslint.json './cypress/**/*.ts'",
     "open": "npx cypress open",
     "pretty": "npx prettier --no-config './**/*.{ts,js}' --write",
-    "test": "npx cypress run"
+    "test": "npx cypress run --spec **/*.feature"
   },
   "version": "1.0.0"
 }

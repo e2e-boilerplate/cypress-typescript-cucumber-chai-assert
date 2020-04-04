@@ -1,12 +1,6 @@
-const browserify = require("@cypress/browserify-preprocessor");
+const cucumber = require("cypress-cucumber-preprocessor").default;
 
-module.exports = (on) => {
-  const options = {
-    browserifyOptions: {
-      extensions: [".js", ".ts"],
-      plugin: [["tsify"]],
-    },
-  };
-
-  on("file:preprocessor", browserify(options));
+// eslint-disable-next-line no-unused-vars
+module.exports = (on, config) => {
+  on("file:preprocessor", cucumber());
 };
