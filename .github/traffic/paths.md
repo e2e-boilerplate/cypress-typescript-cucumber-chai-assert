@@ -1,6 +1,6 @@
 | referrer                                                                          | count | uniques |
 | :-------------------------------------------------------------------------------- | :---- | :------ |
-| /e2e-boilerplate/cypress-typescript-cucumber-chai-assert                          | 6     | 2       |
+| /e2e-boilerplate/cypress-typescript-cucumber-chai-assert                          | 7     | 2       |
 | /e2e-boilerplate/cypress-typescript-cucumber-chai-assert/actions                  | 6     | 2       |
 | /e2e-boilerplate/cypress-typescript-browserify-cucumber-assert                    | 5     | 1       |
 | /e2e-boilerplate/cypress-typescript-cucumber-assert                               | 3     | 1       |
